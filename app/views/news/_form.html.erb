@@ -1,6 +1,6 @@
-<%= form_for(news) do |f| %>
+<%= bootstrap_form_for(news) do |f| %>
   <% if news.errors.any? %>
-    <div id="error_explanation">
+    <div class="alert alert-warning" id="error_explanation">
       <h2><%= pluralize(news.errors.count, "error") %> prohibited this news from being saved:</h2>
 
       <ul>
@@ -11,25 +11,10 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= f.label :published_at %>
     <%= f.datetime_select :published_at %>
-  </div>
-
-  <div class="field">
-    <%= f.label :title %>
     <%= f.text_field :title %>
-  </div>
-
-  <div class="field">
-    <%= f.label :teaser %>
     <%= f.text_area :teaser %>
-  </div>
-
-  <div class="field">
-    <%= f.label :content %>
     <%= f.text_area :content, id: 'edit' %>
-  </div>
 
   <div class="actions">
     <%= f.submit %>
