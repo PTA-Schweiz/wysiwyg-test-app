@@ -1,24 +1,21 @@
-<p id="notice"><%= notice %></p>
-
-<p>
-  <strong>Published at:</strong>
-  <%= @news.published_at %>
-</p>
-
-<p>
-  <strong>Title:</strong>
-  <%= @news.title %>
-</p>
-
-<p>
-  <strong>Teaser:</strong>
-  <%= @news.teaser %>
-</p>
-
-<p>
-  <strong>Content:</strong>
-  <%= @news.content %>
-</p>
-
-<%= link_to 'Edit', edit_news_path(@news) %> |
+<div class="row">
+  <div class="col-xs-12">
+    <h2><%= @news.title %></h2>
+    <%= News.human_attribute_name :published_at %>: <%= @news.published_at.to_s(:short) %>
+  </div>
+</div>
+<div class="row">
+  <div class="col-xs-12">
+    <div class="fr-view">
+      <%= @news.teaser.html_safe %>
+    </div>
+  </div>
+</div>
+<div class="row">
+  <div class="col-xs-12">
+    <div class="fr-view">
+      <%= @news.content.html_safe %>
+    </div>
+  </div>
+</div>
 <%= link_to 'Back', news_index_path %>

@@ -20,7 +20,7 @@
           </div>
         </div>
         <div class="panel-footer">
-          <%= news.published_at %>
+          <%= News.human_attribute_name :published_at %>:  <%= news.published_at.to_s(:short) %>
         </div>
       </div>
     <% end %>
