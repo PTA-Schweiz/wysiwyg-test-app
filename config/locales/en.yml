@@ -21,3 +21,6 @@
 
 en:
   hello: "Hello world"
+  views:
+    news:
+      read_more: "Weiter lesen..."

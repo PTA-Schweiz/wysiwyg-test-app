@@ -9,4 +9,6 @@ Rails.application.routes.draw do
       resources :images
     end
   end
+
+  root to: 'news#index'
 end
