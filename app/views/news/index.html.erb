@@ -7,20 +7,14 @@
 <div class="row">
   <div class="col-xs-12">
     <% @news.each do |news| %>
-      <div class="panel panel-default">
-        <div class="panel-heading">
-          <h3><%= news.title %></h3>
-        </div>
-        <div class="panel-body">
-          <div class="fr-view clearfix">
+      <div class="card">
+        <div class="card-block">
+          <h4 class="card-title"><h3><%= news.title %></h3></h4>
+          <h6 class="card-subtitle mb-2 text-muted"><%= News.human_attribute_name :published_at %>:  <%= news.published_at.to_s(:short) %></h6>
+          <div class="card-text fr-view clearfix">
             <%= news.teaser.html_safe %>
           </div>
-          <div class="pull-right">
-            <%= link_to t('views.news.read_more'), news_path(news) %>
-          </div>
-        </div>
-        <div class="panel-footer">
-          <%= News.human_attribute_name :published_at %>:  <%= news.published_at.to_s(:short) %>
+          <%= link_to t('views.news.read_more'), news_path(news), class: 'card-link' %>
         </div>
       </div>
     <% end %>

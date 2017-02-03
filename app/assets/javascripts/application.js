@@ -17,4 +17,3 @@
 //= require plugins/image.min
 //= require plugins/code_view.min
 //= require_tree .
-

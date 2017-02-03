@@ -1,18 +1,20 @@
-<div class="row">
-  <div class="col-xs-12">
-    <h2><%= @news.title %></h2>
-    <%= News.human_attribute_name :published_at %>: <%= @news.published_at.to_s(:short) %>
-    <hr>
-    <div class="fr-view">
-      <%= @news.teaser.html_safe %>
+<div class="bg-alt">
+  <div class="row">
+    <div class="col-xs-12">
+      <h2><%= @news.title %></h2>
+      <%= News.human_attribute_name :published_at %>: <%= @news.published_at.to_s(:short) %>
+      <hr>
+      <div class="fr-view">
+        <%= @news.teaser.html_safe %>
+      </div>
     </div>
   </div>
-</div>
-<div class="row">
-  <div class="col-xs-12">
-    <div class="fr-view">
-      <%= @news.content.html_safe %>
+  <div class="row">
+    <div class="col-xs-12">
+      <div class="fr-view">
+        <%= @news.content.html_safe %>
+      </div>
     </div>
   </div>
+  <%= link_to 'Back', news_index_path %>
 </div>
-<%= link_to 'Back', news_index_path %>

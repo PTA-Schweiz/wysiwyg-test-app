@@ -10,12 +10,9 @@
  * files in this directory. Styles in this file should be added after the last require_* statement.
  * It is generally better to create a new file per style scope.
  *
- *= require_tree .
  *= require_self
- *= require _bootstrap
  *= require froala_style.min
  *= require plugins/image.min
  *= require plugins/code_view.min
  *= require font-awesome
- *= require rails_bootstrap_forms
  */
